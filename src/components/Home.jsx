@@ -44,26 +44,26 @@ const Home = () => {
     <div>
       <form onSubmit={submitHandler}>
         <div>
-          <label htmlFor="pprice">Product Price: </label>
+          <label htmlFor="pprice">Choose Price: </label>
           <input type="number" id="pprice" required />
-          <label htmlFor="pname">Product Name: </label>
+          <label htmlFor="pname">Choose dish: </label>
           <input type="text" id="pname" required />
-          <label htmlFor="category">Category: </label>
+          <label htmlFor="category">Choose a Table </label>
           <select name="category" id="select">
-            <option value="Electronics">Electronics</option>
-            <option value="Food">Food</option>
-            <option value="Fashion">Fashion</option>
+            <option value="TABLE1">TABLE1</option>
+            <option value="TABLE2">TABLE2</option>
+            <option value="TABLE3">TABLE3</option>
           </select>
-          <Button>Add Product</Button>
+          <Button>AddToBill</Button>
         </div>
       </form>
       <ul>
         {products.map((product, index) => (
           <li key={index}>
             <div>
-              <p>Product Name: {product.pname}</p>
-              <p>Product Price: {product.pprice}</p>
-              <p>Category: {product.category}</p>
+              <p>Choose Price: {product.pprice}</p>
+              <p>Choose dish: {product.pname}</p>
+              <p>Choose a table:{product.category}</p>
               <button onClick={() => handleDelete(index)}>Delete</button>
             </div>
           </li>
